@@ -44,7 +44,7 @@ Antes de continuarmos e configurarmos nossa pipeline devidamente devemos nos ate
 
 ## Conceitos Iniciais
 
-É necessário entender os parâmetros mínimos necessários para criação de uma pipeline, toda pipeline é escrita em arquivo com formato **.yml ou .yaml**, sendo necessário seguir a sintaxe deste formato, recomenda-se a utilização de extensões como a YAML do vscode:
+É necessário entender os parâmetros mínimos necessários para criação de uma pipeline, as pipelines utilizadas e referenciadas no presente guia são escritas em arquivo com formato **.yml ou .yaml**, sendo necessário seguir a sintaxe deste formato, recomenda-se a utilização de extensões como a YAML do vscode:
 
 ![Yaml extension](images/yaml.png)
 
