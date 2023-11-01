@@ -2,6 +2,8 @@
 
 Este guia assim como este repositório foram criados visando instigar e prover os alunos da FeMASS com as informações mínimas necessárias para criação, desenvolvimento e implementação de pipelines nos seus projetos de desenvolvimento de software.
 
+O entendimento de em que momento do fluxo e quando cada pipeline vai atuar depende também de certo conhecimento perante CI/CD e DevOps, é recomendado ler o pdf relativo ao trabalho de conclusão de curso do dono deste repositório, é recomendado também a leitura do livro do Pereira Neto (2022): DevOps: CI e CD, disponível na loja virtual da amazon para Kindle.
+
 As justificativas para utilização de pipelines está contida no pdf que existe neste repositório que representa o Trabalho de Conclusão de Curso do autor e proprietário deste repositório.
 
 ## Sumário de Conteúdos
@@ -44,17 +46,17 @@ Antes de continuarmos e configurarmos nossa pipeline devidamente devemos nos ate
 
 ## Conceitos Iniciais
 
-É necessário entender os parâmetros mínimos necessários para criação de uma pipeline, as pipelines utilizadas e referenciadas no presente guia são escritas em arquivo com formato **.yml ou .yaml**, sendo necessário seguir a sintaxe deste formato, recomenda-se a utilização de extensões como a YAML do vscode:
+É necessário entender os parâmetros mínimos necessários para criação de uma pipeline, as pipelines utilizadas e referenciadas no presente guia são escritas em  formato **.yml ou .yaml**, sendo necessário seguir a sintaxe deste formato, recomenda-se a utilização de extensões como a YAML do vscode:
 
 ![Yaml extension](images/yaml.png)
 
-No caso a sintaxe é relativa ao GitHub Actions, porém o conceito da pipeline se aplica aos demais provedores desse serviço. Porém é necessário ressaltar a importância do estudo da documentação específica de cada provedor.
+No caso a sintaxe é relativa ao GitHub Actions, porém o conceito da pipeline se aplica aos demais provedores desse serviço. É necessário ressaltar a importância do estudo da documentação específica de cada provedor.
 
 É de extrema importância no caso do GitHubActions que as pipelines estejam na raíz do repositório dentro seguinte estrutura de pastas: **.github\workflows\arquivo-pipeline.yml**
 
 Seguindo para os conceitos com o arquivo yaml criado, é recomendado criar um nome (a partir da propriedade "name") para pipeline, a fim de manter controle caso haja mais de 1 como também definir nesta o contexto relacionado.
 
-A utilização da propriedade "on" determina as condições para a qual a pipeline irá rodar.
+A utilização da propriedade "on" determina as condições para a qual a pipeline será executada.
 Esta propriedade é acompanhada das suas condições que engatilham a pipeline, podendo ser "push", que é quando há atualizações diretamente em alguma branch ou resultado do merge de uma pull request ou "pull_request", que é quando há uma pull request aberta para uma determinada branch.
 
 A maneira de determinar quais branches serão utilizadas é a partir da propriedade "branches", definindo a lista de branches a ser utilizada.
@@ -80,7 +82,7 @@ Cumprindo os requisitos de condições é possível seguir para a propriedade "j
 
 Cada job deve possuir um nome (nesse caso build) e o tipo de sistema operacional que vai receber o job em questão, representado pela propriedade "runs-on" (neste caso a última versão disponível de um Ubunto).
 
-Definidos o job e a o SO que receberá o job podemos seguir para os passsos do job, que são representados pela propriedade "steps", que representa uma sequência de comandos ou tarefas que serão executadas como parte do job.
+Definidos o job e a o SO que receberá o job podemos seguir para os passsos do job, que são representados pela propriedade "steps", este é uma sequência de comandos ou tarefas que serão executadas como parte do job.
 
 É importante ressaltar a necessidade da utilização do step de checkout do git, que permite o job de acessar o repositório diretamente.
 Para esse é utilizada a seguinte anotação:
