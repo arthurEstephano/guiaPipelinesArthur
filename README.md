@@ -19,6 +19,7 @@ As justificativas para utilização de pipelines está contida no pdf que existe
     - [Deploy](#deploy)
   - [Desenvolvendo uma pipeline para integração com SonarCloud](#desenvolvendo-uma-pipeline-para-integração-com-sonarcloud)
   - [Outros serviços de pipelines](#outros-serviços-de-pipelines)
+  - [Custos](#custos)
   - [Criador](#criador)
 
 ## Sobre as ferramentas
@@ -457,6 +458,21 @@ Detalhamentos sobre cada item disposto na imagem são encontrados no pdf referen
 - [Azure Pipelines](https://learn.microsoft.com/pt-br/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops)
 - [AWS Pipelines](https://aws.amazon.com/pt/getting-started/projects/set-up-ci-cd-pipeline/)
 - [Oracle DevOps](https://www.oracle.com/br/devops/devops-service//)
+
+## Custos
+
+Os custos referentes as ferramentas utilizadas nesse guia só se aplicam aos serviços relacionados a Azure.
+
+Tanto o ACR quanto o AKS possuem custos dinâmicos (a depender do volume utilizado, rede e tipo de VM), durante a utilização destes serviços foram gerados 2 invoices (faturas) a partir da assinatura deles. Todavia nenhum valor foi pago, visto que a conta Azure é vinculada a conta do GitHub Education e os valores foram debitados do crédito concedido pelo GitHub.
+
+Como visto nas figuras abaixo, o custo total foi de **R$ 513,71**, porém o total pago (depois dos descontos do GitHub) foi de **R$ 0,00**.
+![Invoice Novembro](images/invoice-out.png)
+
+![Invoice Dezembro](images/invoice-nov.png)
+
+É válido ressaltar que os custos em grande parte foram provenientes do AKS e, haveriam maneiras de mitigar ele, como por exemplo a criação de rotinas que operam os serviços só em certas janelas de tempo durante o dia.
+
+É extremamente necessário acompanhar os custos atrelados (minimamente) todo mês, por meio do Gerenciamento de Custos, a fim de não sofrer cobranças fora do escopo do Github Education ou ter seus serviços deletados/stopados por falta de crédito.
 
 ## Criador
 
