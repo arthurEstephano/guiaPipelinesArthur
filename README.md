@@ -479,3 +479,4 @@ Como visto nas figuras abaixo, o custo total foi de **R$ 513,71**, porém o tota
 **Arthur Moura**:
 
 - <https://github.com/arthurEstephano>
+- <https://www.linkedin.com/in/arthur-moura-012a0b200/>
